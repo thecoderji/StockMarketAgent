@@ -15,17 +15,21 @@ A simple, powerful tool to analyze stocks using Python, FastAPI, and Yahoo Finan
 - **Detailed Output**: Includes price, company, currency, 50-day average, and recommendation.
 - **Simple Code**: Easy to understand and extend.
 
+# StockMarketAgent
+
 ## Project Structure
 
-StockMarketAgent/
-├── app/
-│ ├── stock_fetcher.py # Gets stock data
-│ ├── agent.py # Analyzes and recommends
-│ ├── api.py # API setup
-├── main.py # Runs the app
-├── requirements.txt # Dependencies
-├── .env # Port settings
-└── README.md # This file
+| Path                          | Description                  |
+|-------------------------------|------------------------------|
+| `StockMarketAgent/`           | Root directory              |
+| `├── app/`                    | Application modules         |
+| `│ ├── stock_fetcher.py`      | Gets stock data             |
+| `│ ├── agent.py`              | Analyzes and recommends     |
+| `│ ├── api.py`                | API setup                   |
+| `├── main.py`                 | Runs the app                |
+| `├── requirements.txt`        | Dependencies                |
+| `├── .env`                    | Port settings               |
+| `└── README.md`               | This file                   |
 
 ## Setup
 

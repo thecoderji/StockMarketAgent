@@ -27,14 +27,6 @@ StockMarketAgent/
 ├── .env # Port settings
 └── README.md # This file
 
-text
-
-Collapse
-
-Wrap
-
-Copy
-
 ## Setup
 
 1. **Clone the Repo**:
@@ -45,63 +37,29 @@ Copy
    bash
    ```
 
-Collapse
-
-Wrap
-
-Copy
 python -m venv venv
 venv\Scripts\activate # Windows
 
 # source venv/bin/activate # macOS/Linux
 
 Install Dependencies:
-bash
-
-Collapse
-
-Wrap
-
-Copy
 pip install -r requirements.txt
+
 Set Port (in .env):
-text
-
-Collapse
-
-Wrap
-
-Copy
 PORT=8000
+
 Run the App:
-bash
-
-Collapse
-
-Wrap
-
-Copy
 python main.py
+
 API runs at http://localhost:8000.
+
 How to Use
 API Endpoint: POST /stock
 Request: Send a ticker in JSON.
-powershell
-
-Collapse
-
-Wrap
-
-Copy
-Invoke-WebRequest -Uri "http://localhost:8000/stock" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"ticker":"AAPL"}' | Select-Object -ExpandProperty Content | ConvertFrom-Json
+Powershell
+Invoke-WebRequest -Uri "http://localhost:8000/stock" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"ticker":"COMPANY_STOCK_NAME"}' | Select-Object -ExpandProperty Content | ConvertFrom-Json
 Response Example (AAPL):
-text
 
-Collapse
-
-Wrap
-
-Copy
 ticker: AAPL
 price: 199.88
 company: Apple Inc.
@@ -109,39 +67,30 @@ currency: USD
 timestamp: 2025-04-05T12:00:00.123456
 moving_avg_50: 228.50
 analysis: The current price ($199.88) is compared to the 50-day moving average ($228.50). Recommendation: BUY.
+
 Try These Tickers
 US: "AAPL", "TSLA"
 India: "RELIANCE.NS", "TCS.NS"
-Example Outputs
+
+Example Outputs-
 AAPL:
-text
-
-Collapse
-
-Wrap
-
-Copy
 ticker: AAPL
 price: 199.88
 company: Apple Inc.
 currency: USD
 moving_avg_50: 228.50
 analysis: The current price ($199.88) is compared to the 50-day moving average ($228.50). Recommendation: BUY.
+
 RELIANCE.NS:
-text
-
-Collapse
-
-Wrap
-
-Copy
 ticker: RELIANCE.NS
 price: 1245.45
 company: Reliance Industries Limited
 currency: INR
 moving_avg_50: 1270.00
 analysis: The current price ($1245.45) is compared to the 50-day moving average ($1270.00). Recommendation: BUY.
-Requirements
+
+
+# Requirements
 Python 3.10+
 Internet connection for yfinance
 Windows/macOS/Linux
